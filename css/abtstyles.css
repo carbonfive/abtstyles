@@ -1,0 +1,31 @@
+
+
+/*-----Colors-----*/
+#primarycolors p {
+  color: #ffffff;
+}
+
+#mainbgcolor {
+  background: #4aa9db;
+}
+
+#mainfgcolor {
+  background: #09064d;
+}
+
+#maintextcolor {
+  background: #414042;
+}
+
+
+/*-----Specific Styles for the Style Guide page only-----*/
+
+#darkbg {
+  background: #4AA9DB;
+}
+
+.graytitle {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #979797;
+}
