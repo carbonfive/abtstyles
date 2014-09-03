@@ -1,0 +1,152 @@
+@import "foundationsettings";
+@import "foundation";
+
+/*  ==================================================
+    Global Style Variables
+    ==================================================  */
+
+$bodyFontFamily: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontBold: 700;
+$fontReg: 400;
+$fontLight: 300;
+
+$primaryColor: #4aa9db; /* Cyan blue */
+$secondaryColor: #09064d; /* Dark blue */
+$primaryTextColor: #414042; /* Dark gray */
+$secondaryTextColor: #979797; /* Med gray */
+$fieldColor: #f7f7f7; /* Light gray */
+$successColor: #6ac20a; /* Bright green */
+$errorColor: #d0021b; /* Bright red */
+$black: #000;
+$white: #fff;
+
+
+/*  ==================================================
+    Typography
+    ==================================================  */
+
+body {
+    font: $bodyFontFamily;
+}
+
+h1 {
+    font-weight: $fontBold;
+}
+
+h2 {
+    font-weight: $fontReg;
+}
+
+h3 {
+    font-weight: $fontReg;
+}
+
+label {
+    font-weight: $fontLight;
+    color: $secondaryColor;
+}
+
+
+
+/*  ==================================================
+    Colors
+    ==================================================  */
+
+.colorBox {
+    padding: 1rem;
+    margin: 0.5rem;
+    color: $white;
+}
+
+.primaryColor {
+    background: $primaryColor;
+}
+
+.secondaryColor {
+    background: $secondaryColor;
+}
+
+.primaryTextColor {
+    background: $primaryTextColor;
+}
+
+.secondaryTextColor {
+    background: $secondaryTextColor;
+}
+
+.fieldColor {
+    background: $fieldColor;
+    color: $black;
+}
+
+.successColor{
+    background: $successColor;
+}
+
+.errorColor {
+    background: $errorColor;
+}
+
+/*  ==================================================
+    Forms, Radios and Checkboxes
+    ==================================================  */
+
+select {
+    background: $fieldColor;
+    border: 1px solid $primaryColor;
+}
+
+select:active {
+    border: 2px solid $primaryColor;
+}
+
+input[type="checkbox"] {
+    background: $fieldColor;
+    width: 10px;
+}
+
+
+/*  ==================================================
+    Specific Styles for the Style Guide page only
+    ==================================================  */
+
+body {
+    background-color: $primaryColor;
+}
+
+.mainsection {
+    background-color: #ffffff;
+    padding: 2rem;
+}
+
+.masterside-nav {
+    background: #4aa9db;
+}
+
+.masterside-nav h1 {
+    color: #ffffff;
+    padding: 0.5rem;
+}
+
+.side-nav {
+    background: #4aa9db;
+    padding: 0.5rem;
+}
+
+.side-nav h1 {
+    color: #ffffff;
+}
+
+.side-nav li a:not(.button) {
+    color: #ffffff;
+}
+
+.grayTitle {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #979797;
+}
+
+.panel.callout {
+    border: none;
+}
