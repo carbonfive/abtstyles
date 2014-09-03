@@ -1,5 +1,6 @@
 @import "foundationsettings";
 @import "foundation";
+// @import "cssreset";
 
 /*  ==================================================
     Global Style Variables
@@ -87,22 +88,74 @@ label {
     background: $errorColor;
 }
 
+
+
 /*  ==================================================
     Forms, Radios and Checkboxes
     ==================================================  */
 
+select, input[type="text"], input[type="radio"], input[type="checkbox"], .prefix  {
+    background: $fieldColor;
+    border: 1px solid $fieldColor;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: $primaryTextColor;
+}
+
+select, input[type="text"], .prefix {
+    height: 3.5rem;
+    vertical-align: middle;
+}
+
 select {
-    background: $fieldColor;
+    background: url("../img/arrowDropdown.png") no-repeat right;
+    background-size: 4% auto;
+    border: 1px solid $secondaryColor;
+}
+
+select:active,
+select:hover,
+select:focus,
+input:active,
+input:hover,
+input:focus {
     border: 1px solid $primaryColor;
+    transition: none;
+    box-shadow: none;
 }
 
-select:active {
-    border: 2px solid $primaryColor;
+
+/* There is likely a better way to do this placeholder styling */
+::-webkit-input-placeholder {
+    color: $secondaryTextColor;
 }
 
-input[type="checkbox"] {
-    background: $fieldColor;
-    width: 10px;
+::-moz-placeholder {
+    color: $secondaryTextColor;
+}
+
+:-ms-input-placeholder {
+    color: $secondaryTextColor;
+}
+
+
+/*  ==================================================
+    Validation
+    ==================================================  */
+
+
+/*  ==================================================
+    Buttons and Links
+    ==================================================  */
+
+
+/*  ==================================================
+    Icons
+    ==================================================  */
+
+.panel {
+
 }
 
 
@@ -115,38 +168,34 @@ body {
 }
 
 .mainsection {
-    background-color: #ffffff;
+    background-color: $white;
     padding: 2rem;
 }
 
 .masterside-nav {
-    background: #4aa9db;
+    background: $primaryColor;
 }
 
 .masterside-nav h1 {
-    color: #ffffff;
+    color: $white;
     padding: 0.5rem;
 }
 
 .side-nav {
-    background: #4aa9db;
+    background: $primaryColor;
     padding: 0.5rem;
 }
 
 .side-nav h1 {
-    color: #ffffff;
+    color: $white;
 }
 
 .side-nav li a:not(.button) {
-    color: #ffffff;
+    color: $white;
 }
 
-.grayTitle {
+.sectionTitle {
     font-weight: bold;
     text-transform: uppercase;
-    color: #979797;
-}
-
-.panel.callout {
-    border: none;
+    color: $secondaryTextColor;
 }
