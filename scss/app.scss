@@ -339,10 +339,12 @@ body {
     color: $white;
 }
 
-.side-nav li a:not(.button),
-.side-nav li a:not(.button):hover,
-.side-nav li a:not(.button):focus {
-    color: $white;
+.side-nav {
+    li {
+        a:not(.button), a:not(.button):hover, a:not(.button):focus {
+            color: $white;
+        }
+    }
 }
 
 .sectionTitle {
