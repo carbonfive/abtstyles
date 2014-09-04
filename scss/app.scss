@@ -23,6 +23,19 @@ $white: #fff;
 
 
 /*  ==================================================
+    Mixins
+    ==================================================  */
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+
+
+/*  ==================================================
     Typography
     ==================================================  */
 
@@ -94,9 +107,8 @@ label {
     Forms, Radios and Checkboxes
     ==================================================  */
 
-select, input[type="text"], input[type="radio"], input[type="checkbox"], .prefix  {
+select, input[type="text"], .prefix  {
     background: $fieldColor;
-    border: 1px solid $fieldColor;
     outline: none;
     border: none;
     box-shadow: none;
@@ -105,13 +117,12 @@ select, input[type="text"], input[type="radio"], input[type="checkbox"], .prefix
 
 select, input[type="text"], .prefix {
     height: 3.5rem;
-    vertical-align: middle;
 }
 
 select {
-    background: url("../img/arrowDropdown.png") no-repeat right;
-    background-size: 4% auto;
     border: 1px solid $secondaryColor;
+    background: url("../img/arrowDropdown.png") no-repeat 97.5% 50% $fieldColor;
+    background-size: 5% auto;
 }
 
 select:active,
@@ -123,6 +134,29 @@ input:focus {
     border: 1px solid $primaryColor;
     transition: none;
     box-shadow: none;
+}
+
+input[type="text"]:focus {
+    border: 1px solid $primaryColor;
+}
+
+span.custom.radio {
+    @include border-radius (30px);
+    display: inline-block;
+    background: $fieldColor;
+    border: 1px solid $secondaryTextColor;
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+}
+
+span.custom.checkbox {
+    display: inline-block;
+    background: $fieldColor;
+    border: 1px solid $secondaryTextColor;
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
 }
 
 
@@ -139,23 +173,138 @@ input:focus {
     color: $secondaryTextColor;
 }
 
+input[type="radio"] {
+    background: red;
+}
 
 /*  ==================================================
     Validation
     ==================================================  */
+.validation {
+    p {
+        font-weight: $fontBold;
+    }
+}
+input.success,
+input.success:hover,
+input.success:active,
+input.success:focus {
+    background: url("../img/successCheck.png") no-repeat 97.5% 50% $fieldColor;
+    background-size: 5% auto;
+    border: 1px solid $successColor;
+}
+
+input.error,
+input.error:hover,
+input.error:active,
+input.error:focus {
+    background: url("../img/errorX.png") no-repeat 97.5% 50% $fieldColor;
+    background-size: 5% auto;
+}
+
+input.error,
+input.error:hover,
+input.error:active,
+.submitError {
+    border: 1px solid $errorColor;
+}
+
+input.error:focus {
+    border: 1px solid $fieldColor;
+}
+
+small.error, small.help {
+    @extend label;
+    font-weight: $fontReg;
+    font-style: normal;
+    background: transparent;
+    color: $black;
+}
+
 
 
 /*  ==================================================
     Buttons and Links
     ==================================================  */
 
+.small.round.button {
+    display: table;
+    margin: 0.5rem auto;
+    padding: 0.5rem 2rem;
+    width: 95%;
+    background: url('../img/blue_right_arrow.png') no-repeat 95% 50% $white;
+    background-size: 20px;
+    border: 3px solid $primaryColor;
+
+    p {
+        color: $primaryColor;
+        text-align: center;
+        margin: inherit;
+    }
+}
+
+
+/*Hover style reverses the colors - ignore background color in implementation*/
+.small.round.button:hover,
+.small.round.button:focus {
+    background: $primaryColor;
+    border: 3px solid $white;
+
+    p {
+        color: $white;
+    }
+}
+
+.funnelCTA {
+    background: $primaryColor;
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+
+    .button {
+        margin: 0;
+        padding: 1.5rem;
+        font-weight: $fontBold;
+        font-size: 1.5rem;
+    }
+
+    .back {
+        background: url("../img/arrow_left.png") no-repeat 50% 50%;
+        background-size: 50px;
+        width: 24%;
+        border-right: 2px solid $white;
+    }
+
+    .forward {
+        background: url("../img/arrow_right.png") no-repeat 90% 50%;;
+        background-size: 50px;
+        width: 75%;
+    }
+}
+
+.link {
+    text-decoration: underline;
+    color: $secondaryColor;
+}
+
+.link:hover,
+.link:focus,
+.link:active {
+    color: $primaryColor;
+}
+
 
 /*  ==================================================
     Icons
     ==================================================  */
 
-.panel {
-
+.icons {
+    .panel {
+        text-align: center;
+    }
+    img {
+        height: 50px;
+    }
 }
 
 
@@ -190,7 +339,9 @@ body {
     color: $white;
 }
 
-.side-nav li a:not(.button) {
+.side-nav li a:not(.button),
+.side-nav li a:not(.button):hover,
+.side-nav li a:not(.button):focus {
     color: $white;
 }
 
@@ -198,4 +349,8 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     color: $secondaryTextColor;
+}
+
+.contrastBg {
+    background: $primaryColor;
 }
