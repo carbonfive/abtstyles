@@ -1,6 +1,7 @@
+// @import "cssreset";
 @import "foundationsettings";
 @import "foundation";
-// @import "cssreset";
+
 
 /*  ==================================================
     Global Style Variables
@@ -20,18 +21,6 @@ $successColor: #6ac20a; /* Bright green */
 $errorColor: #d0021b; /* Bright red */
 $black: #000;
 $white: #fff;
-
-
-/*  ==================================================
-    Mixins
-    ==================================================  */
-
-@mixin border-radius($radius) {
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    -ms-border-radius: $radius;
-    border-radius: $radius;
-}
 
 
 
@@ -180,6 +169,7 @@ input[type="radio"] {
 /*  ==================================================
     Validation
     ==================================================  */
+
 .validation {
     p {
         font-weight: $fontBold;
@@ -232,7 +222,7 @@ small.error, small.help {
     margin: 0.5rem auto;
     padding: 0.5rem 2rem;
     width: 95%;
-    background: url('../img/blue_right_arrow.png') no-repeat 95% 50% $white;
+    background: url("../img/arrow_right_blue.svg") no-repeat 95% 50% $white;
     background-size: 20px;
     border: 3px solid $primaryColor;
 
@@ -269,14 +259,14 @@ small.error, small.help {
     }
 
     .back {
-        background: url("../img/arrow_left.png") no-repeat 50% 50%;
+        background: url("../img/arrow_left_white.svg") no-repeat 50% 50%;
         background-size: 50px;
         width: 24%;
         border-right: 2px solid $white;
     }
 
     .forward {
-        background: url("../img/arrow_right.png") no-repeat 90% 50%;;
+        background: url("../img/arrow_right_white.svg") no-repeat 90% 50%;;
         background-size: 50px;
         width: 75%;
     }
@@ -285,12 +275,12 @@ small.error, small.help {
 .link {
     text-decoration: underline;
     color: $secondaryColor;
-}
 
-.link:hover,
-.link:focus,
-.link:active {
-    color: $primaryColor;
+        &:hover,
+        &:focus,
+        &:active {
+            color: $primaryColor;
+        }
 }
 
 
@@ -339,12 +329,10 @@ body {
     color: $white;
 }
 
-.side-nav {
-    li {
-        a:not(.button), a:not(.button):hover, a:not(.button):focus {
-            color: $white;
-        }
-    }
+.side-nav li a:not(.button),
+.side-nav li a:not(.button):hover,
+.side-nav li a:not(.button):focus {
+    color: $white;
 }
 
 .sectionTitle {
