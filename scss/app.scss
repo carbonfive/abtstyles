@@ -110,7 +110,7 @@ select, input[type="text"], .prefix {
 
 select {
     border: 1px solid $secondaryColor;
-    background: url("../img/arrowDropdown.png") no-repeat 97.5% 50% $fieldColor;
+    background: url("../img/arrow_down_dkblue.svg") no-repeat 97.5% 50% $fieldColor;
     background-size: 5% auto;
 }
 
@@ -130,10 +130,10 @@ input[type="text"]:focus {
 }
 
 span.custom.radio {
-    @include border-radius (30px);
     display: inline-block;
     background: $fieldColor;
     border: 1px solid $secondaryTextColor;
+    border-radius: 30px;
     width: 24px;
     height: 24px;
     margin-right: 0.5rem;
@@ -179,7 +179,7 @@ input.success,
 input.success:hover,
 input.success:active,
 input.success:focus {
-    background: url("../img/successCheck.png") no-repeat 97.5% 50% $fieldColor;
+    background: url("../img/successCheck.svg") no-repeat 97.5% 50% $fieldColor;
     background-size: 5% auto;
     border: 1px solid $successColor;
 }
@@ -188,7 +188,7 @@ input.error,
 input.error:hover,
 input.error:active,
 input.error:focus {
-    background: url("../img/errorX.png") no-repeat 97.5% 50% $fieldColor;
+    background: url("../img/errorX.svg") no-repeat 97.5% 50% $fieldColor;
     background-size: 5% auto;
 }
 
@@ -260,14 +260,14 @@ small.error, small.help {
 
     .back {
         background: url("../img/arrow_left_white.svg") no-repeat 50% 50%;
-        background-size: 50px;
+        background-size: 15% auto;
         width: 24%;
-        border-right: 2px solid $white;
+        border-right: 5px solid $white;
     }
 
     .forward {
         background: url("../img/arrow_right_white.svg") no-repeat 90% 50%;;
-        background-size: 50px;
+        background-size: 5% auto;
         width: 75%;
     }
 }
