@@ -129,23 +129,35 @@ input[type="text"]:focus {
     border: 1px solid $primaryColor;
 }
 
+span.custom {
+    vertical-align: top;
+    margin-bottom: 2.5%;
+}
+
 span.custom.radio {
     display: inline-block;
     background: $fieldColor;
-    border: 1px solid $secondaryTextColor;
+    border: none;
     border-radius: 30px;
     width: 24px;
     height: 24px;
     margin-right: 0.5rem;
+
+    &.on {
+        background: $secondaryColor;
+    }
 }
 
 span.custom.checkbox {
     display: inline-block;
     background: $fieldColor;
-    border: 1px solid $secondaryTextColor;
     width: 24px;
     height: 24px;
     margin-right: 0.5rem;
+
+    &.on {
+        background: $secondaryColor;
+    }
 }
 
 
@@ -234,7 +246,11 @@ small.error, small.help {
 }
 
 
-/*Hover style reverses the colors - ignore background color in implementation*/
+/*
+Hover style reverses the colors - ignore background color in implementation
+Needs to be corrected to not use inline-flex (not supported in Safari)
+*/
+
 .small.round.button:hover,
 .small.round.button:focus {
     background: $primaryColor;
