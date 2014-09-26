@@ -111,7 +111,7 @@ select, input[type="text"], .prefix {
 select {
     border: 1px solid $secondaryColor;
     background: url("../img/arrow_down_dkblue.svg") no-repeat 97.5% 50% $fieldColor;
-    background-size: 5% auto;
+    background-size: 1.25rem auto;
 }
 
 select:active,
@@ -139,8 +139,8 @@ span.custom.radio {
     background: $fieldColor;
     border: none;
     border-radius: 30px;
-    width: 24px;
-    height: 24px;
+    width: 2rem;
+    height: 2rem;
     margin-right: 0.5rem;
 
     &.on {
@@ -151,12 +151,13 @@ span.custom.radio {
 span.custom.checkbox {
     display: inline-block;
     background: $fieldColor;
-    width: 24px;
-    height: 24px;
+    width: 2rem;
+    height: 2rem;
     margin-right: 0.5rem;
 
     &.on {
-        background: $secondaryColor;
+        background: url("../img/checkboxblue.svg") no-repeat 50% 50% $fieldColor;
+        background-size: 1rem auto;
     }
 }
 
@@ -192,7 +193,7 @@ input.success:hover,
 input.success:active,
 input.success:focus {
     background: url("../img/successCheck.svg") no-repeat 97.5% 50% $fieldColor;
-    background-size: 5% auto;
+    background-size: 1.25rem auto;
     border: 1px solid $successColor;
 }
 
@@ -201,7 +202,7 @@ input.error:hover,
 input.error:active,
 input.error:focus {
     background: url("../img/errorX.svg") no-repeat 97.5% 50% $fieldColor;
-    background-size: 5% auto;
+    background-size: 1.25rem auto;
 }
 
 input.error,
@@ -239,7 +240,7 @@ small.help {
     padding: 0.5rem 2rem;
     width: 95%;
     background: url("../img/arrow_right_blue.svg") no-repeat 95% 50% $white;
-    background-size: 20px;
+    background-size: 1rem;
     border: 3px solid $primaryColor;
 
     p {
@@ -280,14 +281,14 @@ Needs to be corrected to not use inline-flex (not supported in Safari)
 
     .back {
         background: url("../img/arrow_left_white.svg") no-repeat 50% 50%;
-        background-size: 15% auto;
+        background-size: 1rem auto;
         width: 24%;
         border-right: 5px solid $white;
     }
 
     .forward {
         background: url("../img/arrow_right_white.svg") no-repeat 90% 50%;;
-        background-size: 5% auto;
+        background-size: 1rem auto;
         width: 75%;
     }
 }
@@ -313,7 +314,7 @@ Needs to be corrected to not use inline-flex (not supported in Safari)
         text-align: center;
     }
     img {
-        height: 50px;
+        height: 2rem;
     }
 }
 
