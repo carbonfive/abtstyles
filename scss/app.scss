@@ -134,10 +134,11 @@ span.custom {
     margin-bottom: 2.5%;
 }
 
+/*Radio buttons and checkboxes need work */
 span.custom.radio {
     display: inline-block;
     background: $fieldColor;
-    border: none;
+    border: 1px solid $secondaryTextColor;
     border-radius: 30px;
     width: 2rem;
     height: 2rem;
@@ -151,6 +152,7 @@ span.custom.radio {
 span.custom.checkbox {
     display: inline-block;
     background: $fieldColor;
+    border: 1px solid $secondaryTextColor;
     width: 2rem;
     height: 2rem;
     margin-right: 0.5rem;
@@ -161,6 +163,9 @@ span.custom.checkbox {
     }
 }
 
+.inlinelabel {
+    line-height: 2rem;
+}
 
 /* There is likely a better way to do this placeholder styling */
 ::-webkit-input-placeholder {
