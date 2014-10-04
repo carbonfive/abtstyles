@@ -339,11 +339,11 @@ body {
 
 .masterside-nav {
     background: $primaryColor;
-}
 
-.masterside-nav h1 {
-    color: $white;
-    padding: 0.5rem;
+    & h1 {
+        color: $white;
+        padding: 0.5rem;
+    }
 }
 
 .side-nav {
