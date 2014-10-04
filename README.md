@@ -1,4 +1,4 @@
-# Prosper Responsive Styleguide
+# Prosper Pattern Library - Bridge System
 
 Using Foundation and Sass
   * [Foundation with Sass](http://foundation.zurb.com/docs/sass.html)
